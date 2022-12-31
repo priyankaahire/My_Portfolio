@@ -1,0 +1,28 @@
+<div class="container-fluid page">
+    <div class="page__box p-3 mt-2">Work Experience</div>
+    <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data">
+            <div class="row">
+                <div class="col-md-12">
+                    <p-timeline [value]="workexp" align="alternate">
+                        <ng-template pTemplate="marker" let-exp>
+                            <span class="custom-marker shadow-2">
+                                <i style="-webkit-text-fill-color:#3ca543b5;" class="pi pi-circle-fill"></i>
+                            </span>
+                        </ng-template>
+                        <ng-template pTemplate="content" let-exp>
+                            <p-card [header]="exp.company" [subheader]="exp.timeline">
+                                <h5> {{exp.role}}</h5>
+                                <p>{{exp.work}}</p>
+                                <p *ngIf="exp.technologies" class="tech_info">Technologies : {{exp.technologies}}</p>
+                                <!-- <ul>
+                                  <li *ngFor="let work of exp.work | split">{{work}}</li>
+                                </ul> -->
+                            </p-card>
+                        </ng-template>
+                    </p-timeline>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

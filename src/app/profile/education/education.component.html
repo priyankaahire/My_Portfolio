@@ -1,0 +1,27 @@
+<div class="container-fluid page">
+    <div class="page__box p-3 mt-2">Education</div>
+    <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data text-center">
+            <div class="m-2 card" *ngFor="let eduction of eductionDetails">
+                <div class="row">
+                    <div class="col-md-3 bg-primary aos-init aos-animate" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                        <div class="card-body education-header">
+                            <p>{{eduction.from_to_year}}</p>
+                            <div class="h5">{{eduction.education}}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 aos-init aos-animate" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                        <div class="card-body">
+                            <div class="h5 ed_stream">{{eduction.stream}}</div>
+                            <h5 class="ed_inst">{{eduction.institution}}</h5>
+                            <ul>
+                                <li> {{eduction.info}} </li>
+                                <li>Completed {{eduction.stream}} with <b>{{eduction.percentage}}</b>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="container-fluid page">
+    <div class="page__box p-3 mt-2">Projects</div>
+    <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data" *ngFor="let project of projectDetails">
+            <p-card header="{{project.title}}" subheader="{{project.subtitle}}" 
+            [style]="{width: '360px', margin: '10px'}" styleClass="p-card-shadow">
+                <ng-template pTemplate="header">
+                    <div class="clip_url">
+                        <img 
+                        onerror="this.src = 'assets/resources/images/notfound.png'" 
+                        alt="Card image" class="card-img-top" 
+                        src="../../{{project.imgUrl}}">
+                        <!-- <img *ngIf="project.imgUrl" alt="Card" src="../../{{project.imgUrl}}"> -->
+                        <video *ngIf="project.clipUrl" width="200" autoplay muted controls="true">
+                            <source src="../../{{project.clipUrl}}" type="video/mp4">
+                        </video>
+                    </div>
+                </ng-template>
+                <p style="  overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                        line-clamp: 4; 
+                -webkit-box-orient: vertical;">{{project.desc}}</p>
+                <p style="  overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                        line-clamp: 2; 
+                -webkit-box-orient: vertical;"><b>Technologies: </b>{{project.tech}}</p>
+                <ng-template pTemplate="footer">
+                    <p-button (onClick) = "handelBtnClick(project.livedemo)" [disabled] ="disabledBtn(project.livedemo)" pRipple label="Live view" icon="pi pi-eye"  class="p-button-raised p-button-primary"></p-button>
+                    <p-button (onClick) = "handelBtnClick(project.githurl)"  [disabled] ="disabledBtn(project.githurl)"  pRipple  label="Github Link" icon="pi pi-external-link"  class="p-button-raised p-button-primary" [style]="{'margin-left': '.5em'}"></p-button>
+                </ng-template>
+            </p-card>
+        </div>
+        <p-paginator (onPageChange)="paginate($event)" [rows]="2" [totalRecords]="10"></p-paginator>
+    </div>
+</div>

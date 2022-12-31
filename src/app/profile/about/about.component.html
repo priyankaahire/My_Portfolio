@@ -1,0 +1,54 @@
+<div class="container-fluid page">
+    <div class="page__box p-3 mt-2">About</div>
+    <div class="page__content shadow position-relative">
+        <div class="page__content-data position-absolute ">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="h5 mt-2 title">Work Information</div>
+                    <div style="border-radius: 2px solid #ccc">
+                      <ul>
+                        <li *ngFor="let info of aboutInfo | split">{{info}}</li>
+                      </ul>
+                      <p>{{aboutTag}}</p>
+                    </div>
+                  
+                </div>
+                <mat-divider></mat-divider>
+                <div class="col-md-12">
+                    <div class="h5 mt-2 title">Basic Information</div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <strong class="text-uppercase">Date of Birth:</strong>
+                        </div>
+                        <div class="col-sm-8">{{basicInformation["dob"]}}</div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-4">
+                            <strong class="text-uppercase">Email:</strong>
+                        </div>
+                        <div class="col-sm-8">{{basicInformation["email"]}}</div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-4">
+                            <strong class="text-uppercase">Phone:</strong>
+                        </div>
+                        <div class="col-sm-8">{{basicInformation["phone"]}}</div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-4">
+                            <strong class="text-uppercase">Address:</strong>
+                        </div>
+                        <div class="col-sm-8">{{basicInformation["address"]}}
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-4">
+                            <strong class="text-uppercase">Language:</strong>
+                        </div>
+                        <div class="col-sm-8">{{basicInformation["language"]}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

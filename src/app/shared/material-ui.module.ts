@@ -1,0 +1,11 @@
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+
+@NgModule({
+    declarations: [],
+    imports:[MatToolbarModule, MatIconModule],
+    exports:[MatToolbarModule, MatIconModule]
+})
+export class MatUiModule {}
+  
