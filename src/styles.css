@@ -24,3 +24,62 @@
     background-color: #1e293b !important;
     border-color: #1e293b !important;
 }
+.red-pf-progressbar .p-progressbar .p-progressbar-value{
+  background: #E8927C;
+  border-radius: 2.5px;
+}
+
+.green-pf-progressbar .p-progressbar .p-progressbar-value{
+  background: #79E30F;
+  border-radius: 2.5px;
+}
+
+.yellow-pf-progressbar .p-progressbar .p-progressbar-value{
+  background: #FFEB3B;
+  border-radius: 2.5px;
+}
+
+.green-pf-progressbar-border .p-progressbar{
+  border: 1px solid #79E30F;
+}
+
+.yellow-pf-progressbar-border .p-progressbar{
+  border: 1px solid yellow;
+}
+
+.red-pf-progressbar-border .p-progressbar{
+  border: 1px solid #E8927C;
+}
+.pf-badge-red{
+  background-color: #E8927C;
+}
+
+.pf-badge-green{
+  background-color: #79E30F;
+}
+
+.pf-badge-yellow{
+  background-color: #FFEB3B;
+}
+
+.pf-badge-gray{
+  background-color: #eaeaea;
+}
+
+.pf-badge-red{
+  background-color: #E8927C;
+}
+.pf-text-red{
+  color: #E8927C !important;
+}
+.pf-text-green{
+  color: #79E30F !important;
+}
+
+.pf-text-yellow{
+  color: #FFEB3B !important;
+}
+
+.pf-text-gray{
+  color: #eaeaea;
+}

@@ -4,25 +4,9 @@
     </div>
     <h2 matSubheader class="mt-2">SOFTWARE DEVELOPER</h2>
     <mat-divider></mat-divider>
-    <a mat-list-item routerLink="/home" routerLinkActive="list-item-active">
-        <mat-icon>home</mat-icon>Home
-    </a>
-    <a mat-list-item routerLink="/about" routerLinkActive="list-item-active">
-        <mat-icon>info</mat-icon>About
-    </a>
-    <a mat-list-item routerLink="/education" routerLinkActive="list-item-active">
-        <mat-icon>history_edu</mat-icon>Education
-    </a>
-    <a mat-list-item routerLink="/experience" routerLinkActive="list-item-active">
-        <mat-icon>work_history</mat-icon>Experience
-    </a>
-    <a mat-list-item routerLink="/projects" routerLinkActive="list-item-active">
-        <mat-icon>list</mat-icon>Projects
-    </a>
-    <a mat-list-item routerLink="/skills" routerLinkActive="list-item-active">
-        <mat-icon>engineering</mat-icon>Skills
-    </a>
-    <!-- <a mat-list-item routerLink="/blog" routerLinkActive="list-item-active">
-        <mat-icon>note</mat-icon>Blog
-    </a> -->
+    <ng-container *ngFor="let menu of menuItem">
+        <a *ngIf="menu?.isDisplay == true" mat-list-item routerLink="{{menu.link}}" routerLinkActive="list-item-active">
+            <mat-icon>{{menu.icon}}</mat-icon>{{menu.label}}
+        </a>
+    </ng-container>
 </mat-nav-list>

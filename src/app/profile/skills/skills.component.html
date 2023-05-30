@@ -2,7 +2,31 @@
     <div class="page__box p-3 mt-2">Skills</div>
     <div class="page__content shadow p-3 position-relative">
         <div class="page__content-data position-absolute text-center">
-            Skills Content goes here
+            <div class="section" id="skill">
+                <div class="container">
+                    <div class="h4 text-center mb-4 title">Skills</div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6" *ngFor="let skill of skills">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">{{skill.skill}}</span>
+                                        <div class="right-part">
+                                            <p-progressBar
+                                                [ngClass]="addClassNameForSkills(skill.skill, skill.progress)"
+                                                [value]="skill.progress"
+                                                [showValue]="false"
+                                                [style]="{ height: '7px', marginTop: '5px', width: '100%'}"
+                                                >
+                                            </p-progressBar>
+                                            <span class="progress-value">{{skill.progress}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>

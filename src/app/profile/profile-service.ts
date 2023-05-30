@@ -86,32 +86,32 @@ export class ProfileService {
     {
       'id': '1',
       'skill': 'ANGULAR 2+',
-      'progress': '85%'
+      'progress': '90'
     },
     {
       'id': '2',
       'skill': 'NODE JS',
-      'progress': '40%'
+      'progress': '60'
     },
     {
       'id': '3',
       'skill': 'JAVASCRIPT JQUERY',
-      'progress': '80%'
+      'progress': '80'
     },
     {
       'id': '4',
       'skill': 'MYSQL,MONOGO',
-      'progress': '25%'
+      'progress': '25'
     },
     {
       'id': '5',
       'skill': 'REACT JS',
-      'progress': '20%'
+      'progress': '40'
     },
     {
       'id': '6',
       'skill': 'PYTHON',
-      'progress': '10%'
+      'progress': '10'
     }
   ];
   educationData: any = [
@@ -184,6 +184,20 @@ export class ProfileService {
 
     }
   ]
+  recommendations:any = [
+    {
+      name:"Ashutosh Sharma",
+      profile:"",
+      comment:`Working with team members like Priyanka make positive office culture a reality. One of the rare people who is
+       always jolly and smiling no matter how stressful things are. Combination of positive attitude, ready to learn and share. She takes her task with complete ownership and responsibilities. If Priyanka is working on an assignment, 
+      I was confident that we would get the correct output with quality. It was my pleasure to work with Priyanka.`
+    },
+    {
+      name:"Swinal Dbritto",
+      profile:"",
+      comment:`Priyanka always takes all feedback/suggestions in positive manner and has helped to make things better, a resource with great attitude.`
+    }
+  ]
   getSkills(): Observable<any> {
     return this.skillsData;
   }
@@ -199,4 +213,21 @@ export class ProfileService {
   getBasicInformation(): Observable<any> {
     return this.basicInformation;
   }
+  getRecommendations(): Observable<any> {
+    return this.recommendations;
+  }
+  getScoreColor(number:any, type="pf-badge"){
+    let color_class = '';
+     //% Color class avilable inside the style.css file
+     if(0 <= number && number <= 30){
+       color_class = (type=="pf-badge" || type=="pf-text") ? type+'-red' : "red-"+type+" red-"+type+"-border"
+     }
+     else if(31 <= number && number <= 74){
+       color_class = (type=="pf-badge" || type=="pf-text") ? type+'-yellow' : "yellow-"+type+" yellow-"+type+"-border"
+     }
+     else if(75 <= number && number <= 100){
+       color_class = (type=="pf-badge" || type=="pf-text") ? type+'-green' : "green-"+type+" green-"+type+"-border"
+     }
+     return color_class
+   }
 }

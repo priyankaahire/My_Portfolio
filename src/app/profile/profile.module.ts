@@ -12,7 +12,8 @@ import { SplitPipe } from '../shared/pipe/split';
 import {TimelineModule} from 'primeng/timeline';
 import {CardModule} from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
-import {PaginatorModule} from 'primeng/paginator'
+import {PaginatorModule} from 'primeng/paginator';
+import {ProgressBarModule } from 'primeng/progressbar';
 @NgModule({
   imports: [
     CommonModule,
@@ -21,7 +22,8 @@ import {PaginatorModule} from 'primeng/paginator'
     TimelineModule,
     CardModule,
     ButtonModule,
-    PaginatorModule
+    PaginatorModule,
+    ProgressBarModule
   ],
   declarations: [
     ProfileComponent,
