@@ -8,6 +8,7 @@ import { HomeComponent } from './profile/home/home.component';
 import { ProjectsComponent } from './profile/projects/projects.component';
 import { ServicesComponent } from './profile/services/services.component';
 import { SkillsComponent } from './profile/skills/skills.component';
+import { ReccomendationsComponent } from './profile/reccomendations/reccomendations.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'home', pathMatch: 'full'},
@@ -18,8 +19,10 @@ const routes: Routes = [
   {path: 'experience', component: ExperienceComponent},
   {path: 'projects', component: ProjectsComponent},
   {path: 'skills', component: SkillsComponent},
-  {path: 'services', component: ServicesComponent}
+  {path: 'services', component: ServicesComponent},
+  {path: 'reccomendations', component: ReccomendationsComponent}
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

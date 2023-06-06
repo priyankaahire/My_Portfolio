@@ -14,6 +14,7 @@ import {CardModule} from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import {PaginatorModule} from 'primeng/paginator';
 import {ProgressBarModule } from 'primeng/progressbar';
+import { ReccomendationsComponent } from './reccomendations/reccomendations.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -32,9 +33,8 @@ import {ProgressBarModule } from 'primeng/progressbar';
     ExperienceComponent,
     EducationComponent,
     ProjectsComponent,
-    SplitPipe
-   
-    
+    SplitPipe,
+    ReccomendationsComponent
   ],
  
 })

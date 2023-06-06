@@ -20,7 +20,7 @@ export class SidenavComponent implements OnInit {
       {icon:"work_history", label:"Experience", link:"/experience", isDisplay:true},
       {icon:"list", label:"Projects",link:"/projects", isDisplay:true},
       {icon:"engineering", label:"Skills",link:"/skills", isDisplay:true},
-      {icon:"note", label:"Reccomendations",link:"/skills", isDisplay:true},
+      {icon:"note", label:"Reccomendations",link:"/reccomendations", isDisplay:false},
       {icon:"note", label:"Blog",link:"/blog", isDisplay:false}
     ]
   }
