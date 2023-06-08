@@ -10,10 +10,12 @@ import { ProfileService } from '../profile-service';
 export class ProjectsComponent implements OnInit {
 
   projectDetails: any = [];
+  totalRecord: number = 10;
   constructor(private __projectService: ProfileService) { }
 
   ngOnInit(): void {
     this.projectDetails = this.__projectService.getProjects();
+    this.totalRecord = this.projectDetails.length;
   }
   handelBtnClick(url:string) {
    window.open(url, '_blank');
