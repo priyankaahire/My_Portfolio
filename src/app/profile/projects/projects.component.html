@@ -12,7 +12,7 @@
                         src="{{project.imgUrl}}">
                         <!-- <img *ngIf="project.imgUrl" alt="Card" src="../../{{project.imgUrl}}"> -->
                         <video *ngIf="project.clipUrl" width="200" autoplay muted controls="true">
-                            <source src="../../{{project.clipUrl}}" type="video/mp4">
+                            <source src="{{project.clipUrl}}" type="video/mp4">
                         </video>
                     </div>
                 </ng-template>
